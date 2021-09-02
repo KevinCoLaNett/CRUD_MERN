@@ -19,3 +19,7 @@ export const updateTodo = (todo, id) => fetch(`http://localhost:4000/${id}`, {
   },
   body: JSON.stringify(todo)
 });
+
+export const deleteTodo = (id) => fetch(`http://localhost:4000/delete/${id}`, {
+  method: "DELETE",
+}).then(res => res.json());

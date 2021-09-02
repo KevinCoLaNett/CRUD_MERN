@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { TodoForm } from './TodoForm';
 import { useRouteMatch, useHistory } from "react-router-dom";
-import { getTodo, updateTodo } from "./api";
+import { getTodo, updateTodo } from "../api";
 
 export const EditTodo = () => {
   const match = useRouteMatch();

@@ -63,6 +63,13 @@ app.post("/:id", (req, res) => {
   });
 });
 
+app.delete("/delete/:id", (req, res) => {
+  const id = req.params.id;
+  Todo.findById(req.params.id)
+  .then((user) => user.remove().then(() => res.json({ success: true })))
+  .catch((error) => console.log(error));
+});
+
 app.listen(PORT, () => {
   console.log("Server is running on port " + PORT);
 });

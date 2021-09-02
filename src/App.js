@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
-import {TodoList} from './TodoList'
-import {CreateTodo} from './CreateTodo'
-import {EditTodo} from './EditTodo'
+import {TodoList} from './components/TodoList';
+import {CreateTodo} from './components/CreateTodo';
+import {EditTodo} from './components/EditTodo';
+import {DeleteTodo} from './components/DeleteTodo';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={TodoList}/>
         <Route path="/edit/:id" component={EditTodo}/>
+        <Route path="/delete/:id" component={DeleteTodo}/>
         <Route path="/create" component={CreateTodo}/>
       </Switch>
     </div>
